@@ -1,12 +1,16 @@
 
+import reducer from "../state/taskReducer";
 
-
-const TodoItemList = ({listItem}) => {
+const TodoItemList = ({task}) => {
   return (
     <>
-    <div>TodoItemList</div>
+
+    <li>{task.task}
+    {/* console.log('Task passed to TaskList Component') */}
+
     {/* A checkbox next to it which indicates whether it is "complete." */}
-    <input type="checkbox">Complete</input>
+    <label for="status"> Task Completed </label>
+    <input type="checkbox" name="status" id="status"/>
     {/* The "delete" button should be disabled unless the todo is complete! */}
     <button>Delete</button>
     {/* An "edit" button that replaces the todo string with a text input used to edit the todo. */}
@@ -19,7 +23,7 @@ const TodoItemList = ({listItem}) => {
     save any changes made to the todo within the text input. */}
 
     <button>Save</button>
-    
+    </li>
     </>
   )
 }
