@@ -8,7 +8,6 @@ import todoList from './assets/todoList_data.mjs'
 import TodoList from './components/TodoList'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
