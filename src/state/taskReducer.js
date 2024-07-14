@@ -40,7 +40,10 @@ function reducer(taskList, action) {
                 }
                 return task
             })
-
+        
+        case ("deleteTask") :
+            return taskList.filter(task => task.id != action.payload.id)
+                
         default:
             return taskList
     }

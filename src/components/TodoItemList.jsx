@@ -43,17 +43,14 @@ const TodoItemList = ({ task, dispatch }) => {
             }} />
 
           {/* The "delete" button should be disabled unless the todo is complete! */}
-          {task.complete ? <button id="delete">Delete</button> : null}
+          {task.complete ? <button id="delete" onClick={()=> dispatch({type:"deleteTask", payload:{id: task.id}})}>Delete</button> : null}
 
           {/* An "edit" button that replaces the todo string with a text input used to edit the todo. */}
           <button onClick={editToggle} id="edit">Edit</button>
-          {/*Hint: bind the value of this text input to a piece of state so that 
-    it is always accurate, even when first displayed! */}
 
           {/* When this text input is active, the "delete" and "edit" buttons should 
-    be hidden, and a "save" button should appear. The "save" button should 
-    save any changes made to the todo within the text input. */}
-
+          be hidden, and a "save" button should appear. The "save" button should 
+          save any changes made to the todo within the text input. */}
 
         </li>
 
