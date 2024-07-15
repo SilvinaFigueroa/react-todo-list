@@ -1,6 +1,73 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: auto;
   text-align: center;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.taskItem{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items:center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+.todo-buttons{
+  display: flex;
+  align-items: center; 
+  gap: 10px
+}
+
+.taskDetails{
+  flex-grow: 1;  /*to get all the space available in the container */
+}
+
+button{
+  margin: 2%;
+
+}
+input[type="text"] {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #4CAF50;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+label{
+  line-height: 3;
+  font-size: 1.5em;
+}
+
+/* Customized Checkbox */
+.appCheckbox {
+  appearance: none;
+  width: 35px;
+  height: 30px;
+  border: 1px solid green;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  margin-left: 10px;
+}
+
+.appCheckbox:checked:before {
+  content: "\2714"; /* Unicode for checkmark */
+  color: rgb(5, 139, 16);
+  font-size: 22px; 
+  left: 8px; 
+  top: 4px; 
+  width: 35px; 
+  height: 30px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

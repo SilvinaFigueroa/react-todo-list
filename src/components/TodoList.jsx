@@ -9,7 +9,7 @@ import todoList from "../assets/todoList_data.mjs"
 const initialState = todoList;
 
 
-const TodoList = () => {
+const TodoList = ({title}) => {
   // const [taskList, dispatch] = useReducer(reducer, initialState)
   const [taskList, dispatch] = useReducer(reducer, [])
   const [taskItem, setTaskItem] = useState("")
@@ -27,14 +27,14 @@ const TodoList = () => {
   return (
 
     <>
+      <h2>{title}</h2>
       {/* Input form for adding each task */}
       <form onSubmit={addTask}>
         <input type="text" value={taskItem} onChange={inputTask => setTaskItem(inputTask.target.value)}
           placeholder="Type here your task..." required />
-        <input type="submit" value="Add" />
+        <button type="submit">Add</button>
       </form>
-
-      <h2>Tasks List</h2>
+      
       {/* Send each task to the TodoItemList for displaying */}
       <ul>
         {taskList.map((task) => {

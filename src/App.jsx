@@ -5,14 +5,14 @@ import './App.css'
 import todoList from './assets/todoList_data.mjs'
 
 //Import Components
-import TodoList from './components/TodoList'
+import ListSetUp from './components/ListSetUp'
 
 function App() {
 
   return (
     <>
-      <h1>Todo List</h1>
-      <TodoList/>
+      <h1>Todo List Application</h1>
+        <ListSetUp/>
     </>
 
   )
